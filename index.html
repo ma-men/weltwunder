@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Weltwunder der Neuzeit</title>
+		<link rel="stylesheet" href="css/grundgeruest.css">
+		<link rel="stylesheet" href="css/notes.css">
+	</head>
+
+	<body>
+		<div class="main-wrapper">
+			<header>
+				<div class="header-left">
+					<a href="index.html" class="home-link" title="Zurück zur Startseite">
+						<i class="fa-regular fa-house"></i>
+					</a>
+				</div>
+
+				<div class="header-main">
+					<h1>Weltwunder der Neuzeit</h1>
+				</div>				
+			</header>
+
+  			<main class="page-layout">
+				<div class="note_section">
+				
+					<div class="text-note">
+						<h3>Herzlich Willkommen! </h3> 
+						<p>
+							Hier werden die <strong>7 Neuen Weltwunder</strong> präsentiert – faszinierende Bauwerke aus aller Welt, 
+							die für ihre Schönheit, Geschichte und kulturelle Bedeutung bekannt sind.  
+						</p>
+					</div>
+				
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="chichen_itza.html">
+						<img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Chichen_Itza/Chichen_Itza.jpg" alt="Chichen Itza">
+						<div class="caption"><h3>Chichen Itza</h3><p>Mexiko · Maya-Kultur · 600 n. Chr.</p></div>
+					  </a>
+					</div>
+					
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="taj_mahal.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Taj_Mahal/Taj_Mahal.jpg" alt="Taj Mahal">
+						<div class="caption"><h3>Taj Mahal</h3><p>Indien · Mogulreich · 1653 n. Chr.</p></div>
+					  </a>
+					</div>
+					
+					<div class="note_hidden"></div>
+
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="chinesische_mauer.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Chinesische_Mauer/Great_Wall.jpg" alt="Chinesische Mauer">
+						<div class="caption"><h3>Chinesische Mauer</h3><p>China · Qin-Dynastie · 200 v. Chr.</p></div>
+					  </a>
+					</div>
+					<div class="note_hidden"></div>
+					
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="petra.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Petra/Petra.jpg" alt="Petra">
+						<div class="caption"><h3>Petra</h3><p>Jordanien · Nabatäer · 300 v. Chr.</p></div>
+					  </a>
+					</div>
+
+					
+					
+					<div class="note_hidden"></div>
+
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="kolosseum.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Colosseum/Colosseum.jpg" alt="Kolosseum">
+						<div class="caption"><h3>Kolosseum</h3><p>Italien · Römisches Reich · 80 n. Chr.</p></div>
+					  </a>
+					</div>
+					
+					<div class="text-note">
+						<h3>Wie entstanden die 7 Neuen Weltwunder?</h3>
+
+						<p>Im Jahr 2007 führte die Organisation New7Wonders eine weltweite Online-Abstimmung durch. Aus über 200 Vorschlägen wurden jene sieben Bauwerke ausgewählt, die die Menschheit als besonders beeindruckend und bedeutend empfand.
+
+						Die neuen Weltwunder stehen auf allen Kontinenten und symbolisieren den kulturellen Reichtum und die Kreativität der Menschheit. Sie sind Zeugen der Geschichte und beliebte Reiseziele für Millionen von Menschen.</p>
+					</div>					
+
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="christus_statue.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Christo/Cristo.jpg" alt="Christo Redentor">
+						<div class="caption"><h3>Christo Redentor</h3><p>Brasilien · 1931 n. Chr.</p></div>
+					  </a>
+					</div>
+					
+					
+					<div class="note_hidden"></div>
+
+					<div class="note">
+					  <div class="pin"></div>
+					  <a href="machu_picchu.html">
+						  <img src="img/pin.png" alt="Pin" class="pin-img">
+						<img src="img/Machu_Picchu/Machu_Picchu.jpg" alt="Machu Picchu">
+						<div class="caption"><h3>Machu Picchu</h3><p>Peru · Inka · 1450 n. Chr.</p></div>
+					  </a>
+					</div>
+					
+				</div>
+			</main>
+			
+			<footer>
+				<p>&copy; 2025 Weltwunder der Neuzeit
+					<a href="impressum.html">Impressum</a>  |
+					<a href="datenschutz.html">Datenschutz</a>
+				</p>
+			</footer>
+		</div>
+		
+		<script>
+			// Zufällige Drehungen über CSS-Variable
+			const notes = document.querySelectorAll('.note:not(.intro-note)');
+			notes.forEach(note => {
+				const angle = (Math.random() * 16) - 8; // -8° bis 8°
+				note.style.setProperty('--rotate', `${angle}deg`);
+			});
+		</script>
+	</body>
+</html>

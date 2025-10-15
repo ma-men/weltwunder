@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+ body {
+	margin: 0;
+	font-family:"Trebuchet MS", Segoe, "Segoe UI", "DejaVu Sans", Verdana, sans-serif;
+	background: #d4c9b3;
+	}
+
+.main-wrapper {
+	max-width: 1200px;
+	margin: 2rem auto;
+	background: #f8f4e3;
+	padding: 2rem;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+	border: 5px solid #e0d7c0;
+	border-radius: 10px;
+	box-sizing: border-box;
+	position: relative;
+	}
+
+header, footer {
+	background: #8B0000;
+	color: #fff8e7;
+	text-align: center;
+	
+	padding: 1rem;
+	border-radius: 5px;
+	}
+	
+header {
+  display: grid;
+  grid-template-columns: auto 1fr; /* linke Spalte auto, rechte Spalte füllt Rest */
+  height: 6.1rem;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+
+
+header h1 {
+	margin: 0;
+	font-size: 1.8rem;
+	word-break: break-word;
+	}
+
+
+footer p { margin: 0; font-size: 0.9rem; }
+footer a { color: #fff; text-decoration: underline; margin-left: 0.5rem; }
+
+footer{
+	margin-top: 1rem;
+	}
+
+main{
+	min-height: 50rem;
+}
+

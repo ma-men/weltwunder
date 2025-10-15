@@ -1,0 +1,170 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.4rem;
+  margin-top: 1rem;/**/
+
+}
+
+
+
+
+/* Hamburger-Button */
+.hamburger {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #fff8e7;
+  /*padding: 0 1rem;*/
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.3);
+}
+
+/* Menücontainer */
+.side-menu {
+  position: absolute;
+  max-width: 10rem;
+  top: 8rem; /* unter dem Header */
+  left: 2rem;
+  background-color: #8B0000; 
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+  z-index: 999;
+}
+
+/* Menü aktiv */
+.side-menu.open {
+  max-height: 25rem;
+}
+
+/* Menülinks */
+.side-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.side-menu a {
+  display: block;
+  padding: 10px 18px;
+  color: #fff8e7;
+  text-decoration: none;
+  font-family: Trebuchet MS, sans-serif;
+  transition: background 0.3s ease;
+}
+
+.side-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(1.3);
+}
+
+/* Aktiver Menüpunkt */
+.side-menu a.active {
+  opacity: 0.6;
+  pointer-events: none; /* nicht klickbar */
+  font-style: italic;
+}
+
+
+
+
+
+.content {
+	flex: 3; /* 75 % */
+	}
+
+/* --- Aside --- */
+aside {
+    /*max-width: 18.75rem;*/
+	flex: 1; /* 25 % */
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	}
+  
+iframe {
+	width: 100%;
+	border: 2px solid #8B0000;
+	border-radius: 10px;
+	}
+	
+.google_maps_widget{
+	height: 15.625rem;
+	}
+
+.wetter_widget{
+	height: 12.5rem; 
+	background-color: none;
+	}
+
+.wetter_china img{
+	width: 100%;       /* passt sich der Elternbreite an */
+	height: auto;      /* erhält das Seitenverhältnis */
+	display: block;    /* entfernt kleine Lücken unter Bildern */
+	}
+
+.aside-box {
+	background: #fff8e7;
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+	font-size: 0.95rem;
+	}
+
+.aside-box h3 {
+	margin-top: 0;
+	color: #8B0000;
+	}
+	
+	
+
+
+	
+	
+	
+
+/* Responsiv */
+/* Responsives Verhalten */
+@media (max-width: 600px) {
+		header h1 {
+		font-size: 1.4rem;
+		text-align: center;
+		}
+
+		.hamburger {
+		font-size: 1.625rem;
+		}
+
+		.side-menu {
+		left: 2rem;
+		width: calc(100% - 10px);
+		}
+
+		.side-menu a {
+		text-align: center;
+		}
+}
+
+
+@media (max-width: 900px) {
+	main {
+		flex-direction: column;
+	}
+}

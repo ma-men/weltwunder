@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.note_section{
+	column-width: 220px;
+    column-gap: 1.0rem;
+    padding-top: 1rem;
+}
+
+.note_hidden{
+	min-height: 4rem;
+	padding: 0.5rem;
+    /*border: 2px solid #f0d674;*/
+    position: relative;
+    display: inline-block; 
+    width: 100%;           
+    margin-bottom: 2rem;
+	
+}
+
+.note {
+    --rotate: 0deg; /* Variable für zufällige Rotation */
+    background: #fffbea;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    padding: 0.5rem;
+    border: 2px solid #f0d674;
+    position: relative;
+    display: inline-block; 
+    width: 100%;           
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    cursor: pointer;
+    transform: rotate(var(--rotate));
+  }
+
+  .note img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+  }
+
+  .note a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .note a .caption {
+    text-align: center;
+    transition: color 0.3s;
+  }
+  
+  .note h3{
+  	color: #8B0000;
+	font-weight: bold;
+  }
+  .note p{
+  	color: #8B0000;
+	font-weight:normal;
+	margin-top: -1rem;
+  }
+
+  .note a:hover .caption {
+    color: #8B0000;
+  }
+
+.text-note{
+    background: #fffbea;
+	color: #8B0000;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    padding: 0.5rem;
+    border: 2px solid #f0d674;
+    position: relative;
+    display: inline-block; 
+    width: 100%;           
+    margin-bottom: 2rem;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+
+ .intro-note {
+    width: 100%;
+	margin: 1rem 0 1rem 0;
+	padding: 2rem 1rem 0 1rem;
+	box-sizing: border-box;
+  }
+  
+  .text-note h3{
+	font-weight: bold;
+  }
+  .text-note p{
+	font-weight:normal;
+	margin-top: -1rem;
+  }	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	.pin-img {
+		position: absolute;
+		top: -10px;       /* leicht über den Notizzettel hinausragen */
+		left: 50%;        /* mittig über dem Zettel */
+		transform: translateX(-50%) rotate(-15deg); /* leichte Schrägstellung */
+		width: 30px;      /* Größe der Pinnnadel anpassen */
+		height: 30px;
+		pointer-events: none; /* damit die Grafik nicht klickbar ist */
+	}
+
+
+
+  /* Hover-Effekt für alle anderen Notizzettel */
+  .note:hover:not(.intro-note) {
+    transform: rotate(0deg) scale(1.2);
+    z-index: 100;
+  }
+  
+@media (max-width: 900px) { main { column-width: 180px; } }
+@media (max-width: 600px) { main { column-width: 100%; } }
