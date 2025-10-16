@@ -23,7 +23,6 @@
 
   			<main class="page-layout">
 				<div class="note_section">
-				<div class="note_section-inner">
 					<div class="text-note">
 						<h3>Herzlich Willkommen! </h3> 
 						<p>
@@ -112,7 +111,6 @@
 						<div class="caption"><h3>Machu Picchu</h3><p>Peru · Inka · 1450 n. Chr.</p></div>
 					  </a>
 					</div>
-				</div>	
 				</div>
 			</main>
 			
@@ -125,15 +123,68 @@
 		</div>
 		
 		<script>
-			// Zufällige Drehungen über CSS-Variable
+			// Random rotation (bestehend)
 			const notes = document.querySelectorAll('.note:not(.intro-note)');
 			notes.forEach(note => {
-				const angle = (Math.random() * 16) - 8; // -8° bis 8°
-				note.style.setProperty('--rotate', `${angle}deg`);
-				
+			const angle = (Math.random() * 16) - 8; // -8° bis 8°
+			note.style.setProperty('--rotate', `${angle}deg`);
 			});
-			
 
+			// Grid-Masonry Layout Funktion
+			function applyGridMasonry() {
+			const container = document.querySelector('.note_section');
+			if (!container) return;
+			const rowHeight = parseInt(getComputedStyle(container).getPropertyValue('grid-auto-rows'));
+			const gap = parseInt(getComputedStyle(container).getPropertyValue('gap')) || parseInt(getComputedStyle(container).getPropertyValue('grid-row-gap')) || 0;
+
+			Array.from(container.children).forEach(item => {
+				// nur für .note-Elemente (überspringe evtl. .note_hidden / text-note)
+				if (!item.classList || (!item.classList.contains('note') && !item.classList.contains('text-note'))) {
+				item.style.gridRowEnd = null;
+				return;
+				}
+
+				// Temporär Rotation entfernen, damit Höhe korrekt gemessen wird
+				const prevTransform = item.style.transform;
+				item.style.transform = 'none';
+
+				// Höhe messen
+				const height = item.getBoundingClientRect().height;
+
+				// Wieder Transform zurücksetzen (wichtig für visuelle Darstellung)
+				item.style.transform = prevTransform || '';
+
+				// Berechne Zeilen-Span (inkl. gap)
+				const rowSpan = Math.ceil((height + gap) / (rowHeight + gap));
+				item.style.gridRowEnd = `span ${rowSpan}`;
+			});
+			}
+
+			// Warte auf Bilder / load
+			function imagesLoadedPromise(container) {
+			const imgs = container.querySelectorAll('img');
+			const promises = Array.from(imgs).map(img => {
+				if (img.complete) return Promise.resolve();
+				return new Promise(res => img.addEventListener('load', res));
+			});
+			return Promise.all(promises);
+			}
+
+			const container = document.querySelector('.note_section');
+			if (container) {
+			// initial nach Laden der Bilder
+			imagesLoadedPromise(container).then(() => {
+				applyGridMasonry();
+			});
+
+			// on resize neu berechnen
+			window.addEventListener('resize', () => {
+				// throttle / debounce optional
+				applyGridMasonry();
+			});
+
+			// Wenn du dynamisch Inhalte änderst, rufe applyGridMasonry() erneut auf
+			}
 		</script>
 	</body>
 </html>

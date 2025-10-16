@@ -2,15 +2,18 @@
 /* CSS Document */
 
 
-.note_section{
-	column-width: 220px;
-    column-gap: 1.0rem;
-    padding-top: 1rem;
-    overflow: visible !important;
-    break-inside: avoid;
-  contain: none;
-  position: relative;
-  z-index: 1;
+/* Notes als Grid (Masonry-ähnlich) */
+.note_section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  padding-top: 1rem;
+  align-items: start;
+}
+
+/* Feineinstellung für die Zeilenhöhe, wird in JS benutzt */
+.note_section {
+  grid-auto-rows: 8px; /* Basis-Zeilenhöhe — passt später in JS */
 }
 
 .note_hidden{
@@ -104,47 +107,7 @@
 	font-weight:normal;
 	margin-top: -1rem;
   }	
-	
-	
-	
-	/* Workaround: Safari Masonry ohne Clipping */
-.note_section {
-  position: relative;
-  overflow: visible !important;
-  padding-top: 1rem;
-}
-
-.note_section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.note_section-inner {
-  column-width: 220px;
-  column-gap: 1rem;
-  overflow: visible;
-}
-
-.note_section-inner > * {
-  break-inside: avoid;
-}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		
 	
 	.pin-img {
 		position: absolute;
