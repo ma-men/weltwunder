@@ -6,7 +6,7 @@
 	column-width: 220px;
     column-gap: 1.0rem;
     padding-top: 1rem;
-    overflow: visible;
+    overflow: visible !important;
 }
 
 .note_hidden{
@@ -31,6 +31,7 @@
     width: 100%;           
     margin-bottom: 2rem;
     cursor: pointer;
+    overflow: visible !important;
     transform: rotate(var(--rotate));
     transition: transform 0.3s ease;
   }
