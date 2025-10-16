@@ -29,9 +29,11 @@
     display: inline-block; 
     width: 100%;           
     margin-bottom: 2rem;
-    transition: transform 0.3s ease, z-index 0.3s ease;
     cursor: pointer;
     transform: rotate(var(--rotate));
+    -webkit-transform: rotate(var(--rotate, 0deg));
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    will-change: transform;
   }
 
   .note img {

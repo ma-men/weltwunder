@@ -130,6 +130,7 @@
 			notes.forEach(note => {
 				const angle = (Math.random() * 16) - 8; // -8° bis 8°
 				note.style.setProperty('--rotate', `${angle}deg`);
+				note.style.transform = `rotate(${angle}deg)`; // Safari fallback
 			});
 		</script>
 	</body>
