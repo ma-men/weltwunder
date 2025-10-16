@@ -6,6 +6,7 @@
 	column-width: 220px;
     column-gap: 1.0rem;
     padding-top: 1rem;
+    overflow: visible;
 }
 
 .note_hidden{
