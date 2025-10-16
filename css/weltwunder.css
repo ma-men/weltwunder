@@ -8,6 +8,7 @@
   justify-content: space-between;
   gap: 1.4rem;
   /*margin-top: 1rem;*/
+  overflow: visible !important;
 
 }
 
