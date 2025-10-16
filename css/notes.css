@@ -5,7 +5,7 @@
 .note_section{
 	column-width: 220px;
     column-gap: 1.0rem;
-    padding-top: 0;
+    padding-top: 1rem;
 }
 
 .note_hidden{
@@ -31,9 +31,7 @@
     margin-bottom: 2rem;
     cursor: pointer;
     transform: rotate(var(--rotate));
-    -webkit-transform: rotate(var(--rotate, 0deg));
-    transition: transform 0.3s ease, z-index 0.3s ease;
-    will-change: transform;
+    transition: transform 0.3s ease;
   }
 
   .note img {

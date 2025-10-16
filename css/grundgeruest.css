@@ -20,16 +20,7 @@
 	position: relative;
 	}
 
-.page-layout {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 1.4rem;
-  margin-top: 1rem;/**/
-
-}
-
-
+	
 header, footer {
 	background: #8B0000;
 	color: #fff8e7;

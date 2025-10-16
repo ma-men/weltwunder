@@ -2,10 +2,14 @@
 /* CSS Document */
 
 
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.4rem;
+  margin-top: 1rem;/**/
 
-
-
-
+}
 
 /* Hamburger-Button */
 .hamburger {
