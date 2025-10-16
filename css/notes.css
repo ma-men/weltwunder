@@ -10,11 +10,11 @@
 
 .note_hidden{
 	min-height: 4rem;
-	padding: 0.5rem;
-    /*border: 2px solid #f0d674;*/
-    position: relative;
+  /*padding: 0.5rem;
+    border: 2px solid #f0d674;*/
+  /*  position: relative;
     display: inline-block; 
-    width: 100%;           
+    width: 100%; */          
     margin-bottom: 2rem;
 	
 }
