@@ -7,6 +7,10 @@
     column-gap: 1.0rem;
     padding-top: 1rem;
     overflow: visible !important;
+    break-inside: avoid;
+  contain: none;
+  position: relative;
+  z-index: 1;
 }
 
 .note_hidden{
@@ -34,6 +38,9 @@
     overflow: visible !important;
     transform: rotate(var(--rotate));
     transition: transform 0.3s ease;
+    break-inside: avoid; /* Verhindert Spaltenbruch mitten in einer Note */
+  transform-origin: center;
+  z-index: 2;
   }
 
   .note img {
